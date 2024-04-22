@@ -1,24 +1,16 @@
 return {
-  -- cattpuccin color scheme
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  -- Using lazy.nvim
-  {
-    "ribru17/bamboo.nvim",
-    lazy = true,
-    priority = 1000,
-    config = function()
-      require("bamboo").setup({
-        -- optional configuration here
-      })
-      require("bamboo").load()
-    end,
-  },
+  -- add color theme
+  { "catppuccin/nvim", name = "catppuccin", priotiry = 1000 },
 
-  -- Configure LazyVim to load bamboo
+  { "Shatur/neovim-ayu" },
+
+  { "olivercederborg/poimandres.nvim" },
+
+  -- Configure LazyVim to load catppuccin
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "bamboo",
+      colorscheme = "poimandres",
     },
   },
 }
